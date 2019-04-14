@@ -1,0 +1,2 @@
+::example CreateTask.bat FixKeyRepeat D:\Scripts\OnPowerOn.bat
+schtasks /Create /TN %~1 /SC ONEVENT /EC System /MO "*[System[Provider[@Name='Microsoft-Windows-Kernel-Power'] and EventID=107]]" /TR "%~2"
